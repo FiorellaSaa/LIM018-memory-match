@@ -1,23 +1,6 @@
-//
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
-// JavasSript que contenga el `export` correspondiente...
-//
-// import pokemon from '../data/pokemon/pokemon.js';
 
-// importo la data de webdev
 import webdev from '../data/webdev/webdev.js' 
 
-
-  //console.log(mostrarData);
-
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//const App = () => {
-// fetch('./data/webdev/weddev.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//}
 
 let clickImg=[]
 
@@ -39,31 +22,21 @@ export const dataImagenes = () => {
   return dataImagenes
 };
 
-/*const modalGanaste = () => {
-  let totalMatch = document.getElementsByClassName('flip');
-  if(totalMatch.length === 2){
-    document.getElementById('containerModalFinal').style.display = 'block';
-  }
-}*/
 
 
 const App = () => {
  
-  
-  let array1 = webdev.items
-  let dobleArray= array1.concat(array1)
-  let distribuirCartas = shuffle(dobleArray)
-
-  //console.log(distribuirCartas)
-  
+  let array1 = webdev.items //data
+  let dobleArray= array1.concat(array1) //duplica la data
+  let distribuirCartas = shuffle(dobleArray) //Aplica shuffle a la data
 
   for(let i=0; i<distribuirCartas.length; i++){
 
     //Crear un contenedor de imágenes
-    let contenedorImagenes=document.createElement("div")
-    contenedorImagenes.className="contenedorImagenes"
+    let contenedorImagenes = document.createElement("div")
+    contenedorImagenes.className ="contenedorImagenes"
     contenedorImagenes.id = distribuirCartas[i].id
-    const root= document.getElementById('root')
+    const root = document.getElementById('root')
     root.appendChild(contenedorImagenes)
 
     //Crear un FrontFace
@@ -83,10 +56,7 @@ const App = () => {
     let backFace = document.createElement('div')
     backFace.className='backFace'
     contenedorImagenes.appendChild(backFace)
-    //console.log(array1[i].image)
    
-    //console.log(mostrarImagenes)
-
     //Crear imágenes del backFace
     let imgBackFace = document.createElement('img')
     //imgBackFace.style.backgroundImage = url()
@@ -125,11 +95,11 @@ const App = () => {
     //window.addEventListener('hashchange', () => console.log(window.location.hash))
   }
 
-  let btnInicio = document.getElementById('btnInicio');
+//let btnInicio = document.getElementById('btnInicio');
 let primeraPantalla = document.getElementById('primeraPantalla');
 let segundaPantalla = document.getElementById('segundaPantalla');
 
-btnInicio.addEventListener('click', () =>{
+document.getElementById('btnInicio').addEventListener('click', () =>{
   let ingresarNombre = document.getElementById('ingresarNombre').value;
   let mostrarNombre = document.getElementById('mostrarNombre');
  
@@ -145,30 +115,28 @@ btnInicio.addEventListener('click', () =>{
 let modalBtnPlay = document.getElementById('modalBtnPlay');
 let btnPlay = document.getElementById('btnPlay');
 
-btnPlay.addEventListener('click', () =>{
+  btnPlay.addEventListener('click', () =>{
   modalBtnPlay.style.display = 'none';
   segundaPantalla.style.display = 'block';
   //modalBtnPlay.classList.remove('show');
 });
 
 let btnModalFinal = document.getElementById('btnModalFinal');
+
+const modalGanaste = () => {
+  let totalMatch = document.getElementsByClassName('flip');
+  if(totalMatch.length === 2){
+    document.getElementById('containerModalFinal').style.display = 'block';
+  }
+};
+modalGanaste
   
-btnModalFinal.addEventListener('click', () =>{  
+  btnModalFinal.addEventListener('click', () =>{  
   document.getElementById('containerModalFinal').style.display = 'none';
   segundaPantalla.style.display = 'none';
   primeraPantalla.style.display = 'block';
   location.reload();
 });
-
-  //let containerModalFinal = document.getElementById('containerModalFinal');
-
- 
-
-  //et num1 = ["a","b","c"]
-  //let num1 = [1,2,3,4,5]
- 
-      //console.log(shuffle(dobleArray))
-    //console.log(shuffle(num1))
 
   const el = document.createElement('div');
   el.className = 'App';
