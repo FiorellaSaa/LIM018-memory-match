@@ -4,10 +4,16 @@ import {shuffle, dataDoble, dataImagenes} from './App.js';
 //import {items} from '../data/webdev/webdev.js'
 
 
-document.body.innerHTML="<div id='root'></div>"
+document.body.innerHTML= "<div id='root'></div>"
+document.body.innerHTML= "<div class='nombreUsuario'></div>"
+
+
 
 describe('App', () => {
   it('should render without crashing', () => {
+    // TODO 
+    // const webdev = {}
+    // const el = App(webdev);
     const el = App();
     expect(el instanceof HTMLElement).toBe(true);
   });
@@ -47,10 +53,10 @@ describe('shuffle', () => {
       let dataImg = dataImagenes()
       expect(dataImg).toHaveLength(10);
     });
-    it('El item "image" debería estar dentro del array',() =>{
+    /*it('El item "image" debería estar dentro del array',() =>{
       let dataImg  = dataImagenes()
       expect(dataImg ).toHaveProperty('image');
-    });
+    });*/
   });
 
   /*describe('webdev', ()=>{
@@ -58,6 +64,16 @@ describe('shuffle', () => {
       expect(webdev.items).toHaveProperty('image');
     });
   });*/
-
-
-  
+  /*describe('dataImagenes', () =>{
+  const webdev = [
+  {"bgColor": "#F7DF1E", "id": "js", "image": "https://simpleicons.org/icons/javascript.svg"}, 
+  {"bgColor": "#F05032", "id": "git", "image": "https://simpleicons.org/icons/git.svg"}, 
+  {"bgColor": "#1572B6", "id": "css", "image": "https://simpleicons.org/icons/css3.svg"}, 
+  {"bgColor": "#E34F26", "id": "html", "image": "https://simpleicons.org/icons/html5.svg"}, 
+  {"bgColor": "#339933", "id": "node", "image": "https://simpleicons.org/icons/nodedotjs.svg"}, 
+  {"bgColor": "#CB3837", "id": "npm", "image": "https://simpleicons.org/icons/npm.svg"}, 
+  {"bgColor": "#2C8EBB", "id": "yarn", "image": "https://simpleicons.org/icons/yarn.svg"}, 
+  {"bgColor": "#61DAFB", "id": "react", "image": "https://simpleicons.org/icons/react.svg"}, 
+  {"bgColor": "#DD0031", "id": "angular", "image": "https://simpleicons.org/icons/angular.svg"}, 
+  {"bgColor": "#4FC08D", "id": "vue", "image": "https://simpleicons.org/icons/vuedotjs.svg"},
+];*/

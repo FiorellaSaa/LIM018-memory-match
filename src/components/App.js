@@ -9,10 +9,7 @@ import webdev from '../data/webdev/webdev.js'
 
 
   //console.log(mostrarData);
- 
 
-
-//
 // O alternativamente podríamos cargar el JSON de forma asíncrona usando
 // `fetch` en el momento que consideremos necesario.
 //const App = () => {
@@ -22,32 +19,15 @@ import webdev from '../data/webdev/webdev.js'
 //   .catch(console.error);
 //}
 
-
-/*let array2 = array1.forEach(
-  alert("Hola")
-);*/
-//console.log(array2)
-
-//Craer imagen de primera pantalla
-
-//let imgPrincipal = document.createElement('img')
-//imgPrincipal.setAttribute('src', '../data/mm.jpg')
-//primeraPantalla.appendChild(imgPrincipal)
-
-
-//let mostrarData = document.getElementById('root')
-//mostrarData.innerHTML = webdev.items
-//console.log(webdev.items[0].image)
-
-//document.getElementById("image").src = webdev.items[0].image
 let clickImg=[]
 
 export function shuffle(num){
-  for(let i = num.length-1; i>0; i--){
+  let num1 = [...num]
+  for(let i = num1.length-1; i>0; i--){
     let a = Math.floor(Math.random() * (i + 1));
-    [num[i],num[a]] = [num[a],num[i]];
+    [num1[i],num1[a]] = [num1[a],num1[i]];
   }
-  return num;
+  return num1;
 }
 export const dataDoble = (array1) => {
   let dataDoble = array1.concat(array1)
@@ -59,14 +39,6 @@ export const dataImagenes = () => {
   return dataImagenes
 };
 
-
-
-/*function modalGanaste(){
-  let totalMatch = document.getElementsByClassName('flip');
-  if(totalMatch.length == 2){
-    document.getElementById('containerModalFinal').style.display = 'block';
-  }
-}*/
 /*const modalGanaste = () => {
   let totalMatch = document.getElementsByClassName('flip');
   if(totalMatch.length === 2){
@@ -74,16 +46,16 @@ export const dataImagenes = () => {
   }
 }*/
 
+
 const App = () => {
-  //let crearEtiquetaImg = document.createElement("img")
-  //document.getElementById('root').appendChild(crearEtiquetaImg)
-  //crearEtiquetaImg.src = webdev.items[0].image
+ 
   
   let array1 = webdev.items
   let dobleArray= array1.concat(array1)
   let distribuirCartas = shuffle(dobleArray)
 
   //console.log(distribuirCartas)
+  
 
   for(let i=0; i<distribuirCartas.length; i++){
 
@@ -154,43 +126,46 @@ const App = () => {
   }
 
   let btnInicio = document.getElementById('btnInicio');
-  let primeraPantalla = document.getElementById('primeraPantalla');
-  let segundaPantalla = document.getElementById('segundaPantalla');
+let primeraPantalla = document.getElementById('primeraPantalla');
+let segundaPantalla = document.getElementById('segundaPantalla');
 
-  btnInicio.addEventListener('click', () =>{
-    let ingresarNombre = document.getElementById('ingresarNombre').value;
-    let mostrarNombre = document.getElementById('mostrarNombre');
-   
-      if(ingresarNombre !== ''){
-        mostrarNombre.innerHTML = ` Hola ${ingresarNombre[0].toUpperCase()}${ingresarNombre.substring(1)}!`
-        primeraPantalla.style.display = 'none';
-        segundaPantalla.style.display = 'block';
-      }else{
-        alert('Ingresa tu nombre');
-      }
-  });
+btnInicio.addEventListener('click', () =>{
+  let ingresarNombre = document.getElementById('ingresarNombre').value;
+  let mostrarNombre = document.getElementById('mostrarNombre');
+ 
+    if(ingresarNombre !== ''){
+      mostrarNombre.innerHTML = ` Hola ${ingresarNombre[0].toUpperCase()}${ingresarNombre.substring(1)}!`
+      primeraPantalla.style.display = 'none';
+      segundaPantalla.style.display = 'block';
+    }else{
+      alert('Ingresa tu nombre');
+    }
+});
 
-  let modalBtnPlay = document.getElementById('modalBtnPlay');
-  let btnPlay = document.getElementById('btnPlay');
+let modalBtnPlay = document.getElementById('modalBtnPlay');
+let btnPlay = document.getElementById('btnPlay');
+
+btnPlay.addEventListener('click', () =>{
+  modalBtnPlay.style.display = 'none';
+  segundaPantalla.style.display = 'block';
+  //modalBtnPlay.classList.remove('show');
+});
+
+let btnModalFinal = document.getElementById('btnModalFinal');
   
-  btnPlay.addEventListener('click', () =>{
-    modalBtnPlay.style.display = 'none';
-    segundaPantalla.style.display = 'block';
-    //modalBtnPlay.classList.remove('show');
-  });
-  
+btnModalFinal.addEventListener('click', () =>{  
+  document.getElementById('containerModalFinal').style.display = 'none';
+  segundaPantalla.style.display = 'none';
+  primeraPantalla.style.display = 'block';
+  location.reload();
+});
+
   //let containerModalFinal = document.getElementById('containerModalFinal');
 
-  let btnModalFinal = document.getElementById('btnModalFinal');
-  
-    btnModalFinal.addEventListener('click', () =>{  
-      document.getElementById('containerModalFinal').style.display = 'none';
-      segundaPantalla.style.display = 'none';
-      primeraPantalla.style.display = 'block';
-  });
+ 
 
   //et num1 = ["a","b","c"]
-  //let num = [1,2,3,4,5]
+  //let num1 = [1,2,3,4,5]
  
       //console.log(shuffle(dobleArray))
     //console.log(shuffle(num1))
