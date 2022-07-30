@@ -6,12 +6,16 @@ let clickImg=[]
 
 export function shuffle(num){
   let num1 = [...num]
+  //Recorre el array de atrás hacia adelante
   for(let i = num1.length-1; i>0; i--){
-    let a = Math.floor(Math.random() * (i + 1));
-    [num1[i],num1[a]] = [num1[a],num1[i]];
+      //Escoge un índice aleatorio antes del elemento actual
+      let a = Math.floor(Math.random() * (i + 1));
+      //Intercambia [a,b] por [b,a]
+      [num1[i],num1[a]] = [num1[a],num1[i]];
   }
   return num1;
 }
+
 export const dataDoble = (array1) => {
   let dataDoble = array1.concat(array1)
   return dataDoble
@@ -70,12 +74,10 @@ const App = () => {
         contenedorImagenes.classList.add('flip')
         clickImg.push(e.currentTarget)
         //console.log(clickImg)
-       
-      }
+        }
         if(clickImg.length === 2){
           if(clickImg[0].getAttribute('id') === clickImg[1].getAttribute('id')){
             //console.log('Hiciste Match')
-
             clickImg = []
           }
           else if(clickImg[0].getAttribute('id') !== clickImg[1].getAttribute('id')){
@@ -87,10 +89,13 @@ const App = () => {
               clickImg = []
               },
             500);
-          }  
+          } 
+        else{
+          return null
+          }
       }
+      modalGanaste();
     }
-    
     contenedorImagenes.addEventListener('click', flip)
     //window.addEventListener('hashchange', () => console.log(window.location.hash))
   }
@@ -116,8 +121,8 @@ let modalBtnPlay = document.getElementById('modalBtnPlay');
 let btnPlay = document.getElementById('btnPlay');
 
   btnPlay.addEventListener('click', () =>{
-  modalBtnPlay.style.display = 'none';
-  segundaPantalla.style.display = 'block';
+    modalBtnPlay.style.display = 'none';
+    segundaPantalla.style.display = 'block';
   //modalBtnPlay.classList.remove('show');
 });
 
@@ -125,16 +130,18 @@ let btnModalFinal = document.getElementById('btnModalFinal');
 
 const modalGanaste = () => {
   let totalMatch = document.getElementsByClassName('flip');
-  if(totalMatch.length === 2){
+  if(totalMatch.length === 20){
     document.getElementById('containerModalFinal').style.display = 'block';
+  }else{
+    return null
   }
 };
-modalGanaste
+
   
   btnModalFinal.addEventListener('click', () =>{  
-  document.getElementById('containerModalFinal').style.display = 'none';
-  segundaPantalla.style.display = 'none';
-  primeraPantalla.style.display = 'block';
+    document.getElementById('containerModalFinal').style.display = 'none';
+    segundaPantalla.style.display = 'none';
+    primeraPantalla.style.display = 'block';
   location.reload();
 });
 

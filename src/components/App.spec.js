@@ -1,12 +1,15 @@
 import App from './App.js';
 import {shuffle, dataDoble, dataImagenes} from './App.js';
+import webdev from '../data/webdev/webdev.js';
 
 //import {items} from '../data/webdev/webdev.js'
 
-
-document.body.innerHTML= "<div id='root'></div>"
-document.body.innerHTML= "<div class='nombreUsuario'></div>"
-
+document.body.innerHTML= `<button type='submit' id='btnInicio'></button>
+<div id='root'></div>
+<div id="containerModalFinal" class="containerModalFinal">
+<button id="btnModalFinal"></button>
+</div>
+ <button type='submit' id='btnPlay'></button>`
 
 
 describe('App', () => {
@@ -53,10 +56,10 @@ describe('shuffle', () => {
       let dataImg = dataImagenes()
       expect(dataImg).toHaveLength(10);
     });
-    /*it('El item "image" debería estar dentro del array',() =>{
-      let dataImg  = dataImagenes()
+    it('El item "image" debería estar dentro del primer objeto del array',() =>{
+      let dataImg  = webdev.items[0]
       expect(dataImg ).toHaveProperty('image');
-    });*/
+    });
   });
 
   /*describe('webdev', ()=>{
