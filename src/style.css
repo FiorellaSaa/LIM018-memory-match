@@ -145,13 +145,16 @@ img{
 }
 
 #root{
-    width: 20rem;
+   
+    
     background: #ec5f5f;  /* fallback for old browsers*/
     background: -webkit-linear-gradient(to right, #d2ee58, #ec5f5f);  /* Chrome 10-25, Safari 5.1-6*/
     background: linear-gradient(to right, #d6eb79, #ec5f5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+*/
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    /*margin-top: 1rem;
+    margin-left: 17rem;
+    margin: 0 auto;*/
     padding: 1rem;
     border: 3px solid rgb(221, 217, 5);
     border-radius: 1rem;
@@ -195,10 +198,6 @@ img{
     /*pointer-events: none;*/
 }
 
-/*.show{
-    pointer-events: auto;
-    visibility: visible;
-}*/
 .btnPlay{
     background-color: #c91a23;
     border: 0;
@@ -218,14 +217,11 @@ img{
     background-color: rgba(0, 0, 0, 0.4);
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     position:fixed;
     display: none;
-    padding: 80px 50px;
-    
-    
 }
 
 .modalFinal{
@@ -234,23 +230,17 @@ img{
     align-items: center;
     flex-direction: column;
     background-color: #E7C515;
-    width: 600px;
-    height: 450px;
     border-radius: 5px;
-    margin-left: 350px;
-    margin-top: 50px;
 }
 
 .youWon{
     color: rgb(184, 4, 4);
-    font-size: 40px;
+    font-size: 1.5rem;
     font-family: cursive;
     margin-bottom: 10px;
 }
 
 .imagenYouWon{
-    width: 400px;
-    height: 250px;
     margin-bottom: 30px;
 }
 
@@ -259,7 +249,7 @@ img{
     border: 0;
     border-radius: 5px;
     color: #fff;
-    font-size: 20px;
+    font-size: 1rem;
     padding: 10px 5px;
     cursor: pointer;
     margin-bottom: 30px;
@@ -269,11 +259,50 @@ img{
     html{
         font-size:25px;
     }
+    #root{
+        margin-top: 1rem;
+        margin-left: 17rem;
+        width: 20rem;
+    }
+    .modalFinal{
+        width: 20rem;
+        height: 18rem;
+        margin-left: 17rem;
+        margin-top: 5rem;
+    }
+    .imagenYouWon{
+        width: 15rem;
+        height: 25rem;
+    }
 }
 
 @media (max-width: 768px){
     html{
         font-size:18px;
+    }
+    .backFace img,
+    .frontFace img{
+        width: 5rem;
+        height: 5rem;
+    }
+    .modalBtnPlay{
+        height: 200vh;
+    }
+    #root{
+        margin-top: 3rem;
+        margin-left: 9rem;
+        width: 25rem;
+        height: 40rem;
+    }
+    .modalFinal{
+        width: 30rem;
+        height: 20rem;
+        margin-left: 7rem;
+        margin-top: 8rem;
+    }
+    .imagenYouWon{
+        width: 20rem;
+        height: 20rem;
     }
    
 }
@@ -282,8 +311,25 @@ img{
     html{
         font-size:12px;
     }
+    .backFace img,
+    .frontFace img{
+        width: 7rem;
+        height: 7rem;
+    }
     .modalBtnPlay{
         height: 200vh;
+    }
+    #root{
+        width: 20rem;
+        height: 80rem;
+        margin-top: 3rem;
+        margin-left: 8.5rem;
+    }
+    .modalFinal{
+        width: 30rem;
+        height: 30rem;
+        margin-left: 4.5rem;
+        margin-top: 10rem;
     }
 }
 
@@ -298,10 +344,24 @@ img{
         display: flex;
         justify-content: center;
         align-items: center;
-       
+        margin-top: 3rem;
+        margin-left: 6rem;
+        width: 20rem;
+        height: 80rem;
+  
     }
     .modalBtnPlay{
         height: 200vh;
+    }
+    .modalFinal{
+        width: 25rem;
+        height: 30rem;
+        margin-left: 3rem;
+        margin-top: 9rem;
+    }
+    .imagenYouWon{
+        width: 20rem;
+        height: 20rem;
     }
     }
 
