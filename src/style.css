@@ -59,10 +59,6 @@ ul {
     background-color: #E7C515;
     width: 100vw;
     height: 18vh;
-
-.boton:hover{
-    background-color: rgb(216, 69, 69);
-   
 }
 
 .ingresarNombre {
@@ -110,12 +106,6 @@ img{
     display: none;
 }
 
-/*.contenedorImagenes{
-    display: flex;
-    flex-wrap: wrap;
-    transform-style: preserve-3d;
-    transition: transform .4s cubic-bezier(.16,.77,.83,.49);
-}*/
 .contenedorImagenes{
     display: flex;
     flex-wrap: wrap;
@@ -195,7 +185,7 @@ img{
     cursor: pointer;
 }
 
-/*Primer final*/
+/*Segundo Modal*/
 .containerModalFinal{
     display: flex;
     justify-content: center;
