@@ -2,11 +2,11 @@
 
 ## Índice
 
-[1. Definición del producto](#1-Definición-del-producto)
-[2. Historias de usuario](#2-istorias-de-usuario)
-[3. Prototipo de baja fidelidad](#3-Prototipo-de-baja-fidelidad)
-[4. prototipo de alta fidelidad](#4-Prototipo-de-alta-fidelidad)
-[5.tests de usabilidad](#5-Test-de-usailidad)
+* [1. Definición del producto](#1-Definición-del-producto)
+* [2. Historias de usuario](#2-istorias-de-usuario)
+* [3. Prototipo de baja fidelidad](#3-Prototipo-de-baja-fidelidad)
+* [4. prototipo de alta fidelidad](#4-Prototipo-de-alta-fidelidad)
+* [5.tests de usabilidad](#5-Test-de-usailidad)
 
 ***
 
@@ -97,10 +97,13 @@ PARA saber si he ganado.
 Cuando se visualice todas las cartas destapadas significa que el juego ha terminado y el usuario ha ganado.
 Se mostrará una ventana felicitando al usuario.
 
-## 3. Prototipo de baja fidelidad
-      (Prototipo.jpeg)
-## 4. prototipo de alta fidelidad
-      (prototipo.figma.png)
+## 3. DISEÑO DE LA INTERFAZ DE USUARIO
+
+Prototipo de baja fidelidad
+      [](Prototipo1.jpeg)
+
+prototipo de alta fidelidad
+      [](prototipo.figma.png)
 
 ## 5.tests de usabilidad
 
