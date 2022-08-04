@@ -99,11 +99,13 @@ Se mostrará una ventana felicitando al usuario.
 
 ## 3. DISEÑO DE LA INTERFAZ DE USUARIO
 
-Prototipo de baja fidelidad
-      [](Prototipo1.jpeg)
+### Prototipo de baja fideldad
 
-prototipo de alta fidelidad
-      [](prototipo.figma.png)
+[](img.readme/Prototipo1.jpeg)
+
+### Prototipo de baja fideldad
+
+![](img.readme/prototipo.figma.png)
 
 ## 5.tests de usabilidad
 
