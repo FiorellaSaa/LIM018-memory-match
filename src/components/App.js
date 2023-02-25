@@ -65,7 +65,7 @@ const App = () => {
     //Crear imágenes del backFace
     let imgBackFace = document.createElement('img')
     //imgBackFace.style.backgroundImage = url()
-    imgBackFace.setAttribute('src', '../data/images.png')
+    imgBackFace.setAttribute('src', 'https://cdn-icons-png.flaticon.com/512/7318/7318031.png')
     backFace.appendChild(imgBackFace)
 
    
