@@ -215,8 +215,8 @@ img{
 
 .imagenYouWon{
     margin-bottom: 30px;
-    width: 15rem;
-    height: 10rem;
+    width: 14rem;
+    height: 9rem;
 }
 
 .btnModalFinal{
@@ -293,7 +293,7 @@ img{
     }
     .imagenYouWon{
         width: 25rem;
-        height: 20rem;
+        height: 17rem;
     }
 }
 @media screen and (min-width: 600px){
